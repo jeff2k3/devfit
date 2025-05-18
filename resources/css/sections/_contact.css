@@ -1,0 +1,185 @@
+.contact {
+	background: transparent;
+	color: white;
+	padding: 0.5rem 2rem;
+}
+.contact__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+.contact__form-wrapper {
+	background: #252525;
+	padding: 2rem;
+	border-radius: 10px;
+}
+.contact__title {
+	color: var(--primary-color);
+	font-size: 2rem;
+	text-align: center;
+    margin-bottom: 2rem;
+}
+.contact__form {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.label {
+    font-size: 16px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group__control {
+    display: flex;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #333;
+    padding: 1rem;
+}
+
+.form-group input {
+    height: 55px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 150px;
+}
+
+.form-group__label {
+    position: absolute;
+    pointer-events: none;
+    transition: all 400ms ease;
+    left: 18px;
+    top: 14px;
+	padding: 0 0.3rem;
+    user-select: none;
+}
+
+.form-group__control:focus {
+	outline: 2px solid var(--primary-color-hover);
+}
+
+.form-group__control:valid ~ .form-group__label,
+.form-group__control.form-group--active ~ .form-group__label {
+    top: -22px;
+    font-size: 13px;
+}
+.contact__cta {
+	background: var(--primary-color);
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	transition: background 0.3s ease;
+}
+.contact__cta:hover {
+	background: #ff3333;
+}
+.cta-icon {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+.contact__info {
+	display: grid;
+	gap: 2rem;
+}
+.contact__card {
+	background: #252525;
+	border-radius: 10px;
+	text-align: center;
+    padding: 2rem;
+    transition: transform 300ms ease;
+    will-change: transform;
+    z-index: 1;
+}
+.contact__card:hover {
+    transform: translateY(-7px) !important;
+}
+.contact__icon {
+	width: 50px;
+	height: 50px;
+	background: var(--primary-color);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1rem;
+}
+.contact__icon svg {
+	width: 24px;
+	height: 24px;
+	fill: white;
+}
+.contact__social {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+.social-link {
+	width: 40px;
+	height: 40px;
+	background: #333;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+.social-link:hover {
+	background: var(--primary-color);
+	transform: translateY(-3px);
+}
+.social-link svg {
+	width: 20px;
+	height: 20px;
+	fill: white;
+}
+.contact__map {
+	margin-top: 4rem;
+	height: 400px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.contact__map iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.form-group__control.is-invalid {
+	border: 2px solid #dc3545 !important;
+	padding-right: 2.5rem;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px 16px;
+	outline: none;
+}
+
+.form-group__control.is-valid {
+	border: 2px solid #198754 !important;
+	padding-right: 2.5rem;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23198754' d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px 16px;
+	outline: none;
+}

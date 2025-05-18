@@ -1,0 +1,165 @@
+@media (max-width: 1024px) {
+    .image-caption {
+        bottom: 0 !important;
+        opacity: 1 !important;
+        transition: none !important;
+        background: linear-gradient(to top, rgba(0,0,0,0.8));
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    .image-caption::before {
+        display: none;
+    }
+    .footer__content {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .footer__section {
+        text-align: center;
+    }
+    .footer__social {
+        justify-content: center;
+    }
+    .footer__contact-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+    }
+    .about__content {
+        order: 2;
+        padding: 0 1rem;
+    }
+    .about__grid {
+        order: 2;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+    .about__title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .about__badge {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 1rem;
+    }
+    .about__timeline {
+        padding-left: 25px;
+        margin: 1.5rem 0;
+    }
+    .timeline-marker {
+        left: -32px;
+        width: 18px;
+        height: 18px;
+    }
+    .timeline-content {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .about__image {
+        height: 250px;
+    }
+    .contact__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: inline-block;
+    }
+    .nav__list {
+        position: fixed;
+        height: calc(100vh - var(--headerHeight));
+        top: var(--headerHeight);
+        left: 0;
+        right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+    .nav__item {
+        opacity: 1;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    .cabecalho {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+    .hero {
+        padding: 6rem 1rem 3rem;
+    }
+    .hero__title {
+        font-size: 2rem;
+    }
+    .planos__grid {
+        grid-template-columns: 1fr;
+    }
+    .about {
+        padding: 5rem 1rem;
+        background: #ffffff;
+    }
+    .contact__map {
+        height: 300px;
+        margin-top: 2rem;
+    }
+    .contact__card {
+        padding: 1.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin: 2rem 0 1.5rem;
+    }
+    .about__image-wrapper:hover::after {
+        animation: none;
+        background: none;
+    }
+    .whatsapp-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .whatsapp-text {
+        display: none;
+    }
+    .image-caption {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__image {
+        height: 200px;
+    }
+    .about__title {
+        font-size: 1.5rem;
+    }
+    .timeline-marker {
+        left: -28px;
+    }
+    .image-caption {
+        padding: 0.75rem;
+        font-size: 0.4rem;
+    }
+    .contact {
+        padding: 2rem 1rem;
+    }
+}

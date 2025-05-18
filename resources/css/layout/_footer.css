@@ -1,0 +1,112 @@
+.footer {
+	background: var(--secondary-color);
+	color: #ffffff;
+
+	font-size: 0.9rem;
+}
+.footer__content {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	padding: 3rem;
+}
+.footer__section {
+	margin-bottom: 2rem;
+}
+.footer__title {
+	padding-top: 2rem;
+	color: var(--primary-color);
+	font-size: 1.1rem;
+	margin-bottom: 1.2rem;
+	text-transform: uppercase;
+}
+.footer__text {
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	opacity: 0.9;
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+}
+.footer__social {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+.footer__social-link {
+	transition: transform 300ms ease;
+}
+.footer__social-link:hover {
+	transform: translateY(-3px);
+}
+.footer__icon {
+	width: 24px;
+	height: 24px;
+	fill: #ffffff;
+}
+.footer__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer__link {
+	color: inherit;
+	transition: all 300ms ease;
+	padding: 0.3rem 0;
+	display: inline-block;
+	font-size: 0.9rem;
+}
+.footer__link:hover {
+	color: var(--primary-color);
+    transform: scale(1.1);
+}
+.footer__contact-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer__contact-item {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-bottom: 1rem;
+	opacity: 0.9;
+	font-size: 0.9rem;
+}
+.footer__contact-icon {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+.footer__credits,
+.footer__legal-copy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+.footer__legal-copy {
+	border-bottom: 1px solid #444;
+}
+
+.footer__legal-copy .copyright-text {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.footer__credits .developer-credit {
+    font-size: 0.9rem;
+}
+
+.footer__credits .developer {
+    color: var(--primary-color);
+	font-weight: bold;
+    transition: color 300ms, transform 300ms;
+	letter-spacing: 1.3px;
+}

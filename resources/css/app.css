@@ -1,0 +1,105 @@
+@charset 'UTF-8';
+
+@import url('./base/_reset.css');
+@import url('./base/_variables.css');
+
+@import url('./utils/_animations.css');
+
+@import url('./layout/_header.css');
+@import url('./layout/_footer.css');
+
+@import url('./sections/_hero.css');
+@import url('./sections/_contact.css');
+@import url('./sections/_plans.css');
+@import url('./sections/_about.css');
+
+@import url('breakpoints.css');
+
+body {
+	background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(20, 20, 20, 1)), url('../../images/background.webp');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-position-y: 0px;
+	background-attachment: fixed;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+/* @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+} */
+
+.help-block {
+    position: relative;
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    padding: 0.4rem;
+}
+.whatsapp-button {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	background: #25D366;
+	color: white;
+	padding: 15px 25px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+	transition: all 300ms ease;
+	z-index: 9;
+}
+.whatsapp-icon {
+	width: 30px;
+	height: 30px;
+	fill: currentColor;
+    display: flex;
+    justify-content: center;
+	object-fit: contain;
+}
+.whatsapp-text {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+}
+.whatsapp-button:hover {
+	background: #128C7E;
+	box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
+	animation: pulse 1.5s infinite;
+}
+
+.title {
+	position: relative;
+	font-size: 2.5rem;
+	color: #eee;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 3rem 0 2rem;
+	padding-bottom: 1rem;
+}
+.title::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 4px;
+	background: var(--primary-color);
+	border-radius: 2px;
+}
+
+.revealed {
+	opacity: 1 !important;
+	transform: translate3d(0, 0, 0) !important;
+	transition: all 600ms ease-out;
+}

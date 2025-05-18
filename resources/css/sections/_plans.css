@@ -1,0 +1,77 @@
+.planos {
+	padding: 0.5rem 2rem;
+	background: transparent;
+}
+.planos__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.plano-card {
+	background: var(--secondary-color);
+	border-radius: 10px;
+	padding: 2rem;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	transition: transform 300ms ease;
+}
+.plano-card:hover {
+	transform: translateY(-8px);
+}
+.plano-card--destaque {
+	background: var(--secondary-color);
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+.plano-card--destaque::after {
+	content: "Popular";
+	position: absolute;
+	top: 10px;
+	right: -30px;
+	background: var(--primary-color);
+	color: white;
+	padding: 0.3rem 2rem;
+	transform: rotate(45deg);
+	font-size: 0.8rem;
+}
+.plano-card__title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+.plano-card__preco {
+	margin-bottom: 2rem;
+}
+.plano-card__valor {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #00FF88;
+}
+.plano-card__periodo {
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+.plano-card__beneficios {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 2rem;
+}
+.plano-card__item {
+	padding: 0.8rem 0;
+	border-bottom: 1px solid #eee;
+}
+.plano-card__cta {
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 5px;
+	background: var(--primary-color);
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 300ms ease;
+}
+.plano-card__cta:hover {
+	background: var(--primary-color-hover);
+}

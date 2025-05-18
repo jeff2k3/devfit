@@ -1,0 +1,10 @@
+node_modules/
+
+public/build/*
+!/public/build/.gitignore
+
+resources/temp/*
+!/resources/temp/.gitignore
+
+.vscode/
+.idea/
