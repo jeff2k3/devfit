@@ -4,7 +4,6 @@ import terser from 'gulp-terser';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 import cleanCSS from 'gulp-clean-css';
-import imagemin from 'gulp-imagemin';
 import gifsicle from 'imagemin-gifsicle';
 import mozjpeg from 'imagemin-mozjpeg';
 import optipng from 'imagemin-optipng';
@@ -47,14 +46,16 @@ const minify_js = () =>
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest(paths.build.js));
 
-const minify_img = () =>
-    src(paths.resources.img, { encoding: false })
+const minify_img = async () => {
+    const imagemin = (await import('gulp-imagemin')).default;
+    return src(paths.resources.img, { encoding: false })
         .pipe(imagemin([
             gifsicle({ interlaced: true }),
             mozjpeg({ quality: 75, progressive: true }),
             optipng({ optimizationLevel: 5 })], { verbose: true }))
         .pipe(webp({ quality: 65 }))
         .pipe(dest(paths.img));
+}
 
 const startWatcher = () => {
     watch(paths.resources.css, { usePolling: true, interval: 300 }, minify_css);
