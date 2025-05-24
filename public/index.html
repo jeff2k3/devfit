@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="build/css/app.min.css">
 </head>
 <body>
+    <div class="bg-parallax"></div>
     <header class="header">
         <a href="javascript:void(0)" class="header__logo">DevFit</a>
 
@@ -338,6 +339,15 @@
         </svg>
         <span class="whatsapp-text">Fale Conosco</span>
     </a>
+
+    <script>
+        const bg = document.querySelector('.bg-parallax');
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            bg.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
 
     <script type="module" src="build/js/app.min.js" defer></script>
 </body>
