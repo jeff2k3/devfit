@@ -21,7 +21,7 @@ body {
 	background-position: center center;
 	background-size: cover;
 	background-position-y: 0px;
-	background-attachment: fixed;
+	background-attachment: scroll;
 }
 
 @media (prefers-reduced-motion: no-preference) {
